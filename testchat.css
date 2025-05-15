@@ -1,0 +1,300 @@
+@font-face {
+    font-family: 'machina';
+    src: url(sansation_light.woff);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'machina';
+}
+
+html, body,main {
+    height: 100%;
+    width: 100%; 
+    background-color: grey;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+.navbar {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-box {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-right nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-icon, .cart-icon {
+  font-size: 1rem;
+  cursor: pointer;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-quote {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.featured {
+  background-color: #1e1e1e;
+  height: 30vh; /* full screen height, optional */
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.featured.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.FEATURED {
+  font-size: 6rem;
+  color: white;
+}
+
+.suit-featured {
+  width: 1513px;
+  height: 100vh;
+  background-color: rgb(69, 66, 61);
+  display: flex;
+  justify-content: center;    
+  align-items: center;
+}
+.suit-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.suit{
+    width:100px;
+    zoom: 130%;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(https://media.istockphoto.com/id/871652810/photo/she-knows-how-to-wear-a-suit-properly.jpg?s=612x612&w=0&k=20&c=NiUbeJ1gm0qM78v--gsnfnd0oIKrr-YqP4m9HnBeMhc=);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s ease-in-out;
+}
+ 
+.suit:nth-child(2){
+    background: url(https://i.pinimg.com/736x/a2/26/58/a2265809e4bcbe55bc9c3753e2074622.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.suit:nth-child(3){
+    background: url(https://i.pinimg.com/736x/77/31/27/773127082630f52dddb7047cf81ebca5.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.suit:nth-child(4){
+    background: url(https://i.pinimg.com/736x/bb/ce/46/bbce46fced8f8c427baf696963c3fd04.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.suit:nth-child(5){
+    background: url(https://i.pinimg.com/736x/f0/5a/dd/f05addb70a682cb664c86ee71f4b0120.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.suit:nth-child(6){
+    background: url(https://i.pinimg.com/736x/ed/85/aa/ed85aa6ea3014ecf789217e29f7262ba.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.suit:nth-child(7){
+    background: url(https://i.pinimg.com/736x/f7/31/84/f7318457e29a200e11c723759707881e.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.suit:nth-child(8){
+    background: url(https://i.pinimg.com/736x/17/b2/b1/17b2b14ab997508c6adb28e0a4798789.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.suit h2{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    opacity: 0;
+    transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.suit:hover {
+    width:250px;
+    cursor: pointer;
+
+}
+.suit:hover h2{
+    opacity: 1;
+    bottom: 25px;
+}
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    width: 50%;
+    margin: 2rem 0;
+
+}
+
+section {
+    height: 100vh;
+}   
+
+.container {
+    padding: 5rem;
+
+}
+
+.sticky_parent {
+    height: 500vh;
+
+}
+
+.sticky{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    border: 1px solid red;
+
+}
+
+.scroll_section {
+    height: 100vh;
+    top: 0;
+    height: 100%;
+    width: 500vw;
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    padding: 0 5vw;
+
+}
+
+img{
+    width: 400px;
+    height: 80%;
+    object-fit  : cover;
+    object-position: center;
+}
