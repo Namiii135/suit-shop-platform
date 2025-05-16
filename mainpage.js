@@ -39,6 +39,8 @@ function transform(section){
 stickySections.forEach(section => {
   const scrollSection = section.querySelector('.scroll_section');
   const textElem = document.createElement('div');
+  const secondtextElem = document.createElement('div');
+  
   textElem.textContent = "CHOOSE YOUR STYLE";
   textElem.style.fontSize = "6rem";
   textElem.style.fontWeight = "bold";
