@@ -87,3 +87,92 @@ window.addEventListener('scroll', () => {
     isTyping = false;
   }
 });
+
+
+  window.addEventListener('scroll', () => {
+    const container = document.querySelector('.container');
+    const containerTop = container.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight / 7;
+
+    if (containerTop < triggerPoint) {
+      container.classList.add('scrolled');
+    } else {
+      container.classList.remove('scrolled');
+    }
+  });
+
+const styleImages = [
+  
+  'framesickma/ezgif-frame-004.jpg',
+  'framesickma/ezgif-frame-005.jpg',
+  'framesickma/ezgif-frame-006.jpg',
+  'framesickma/ezgif-frame-007.jpg',
+  'framesickma/ezgif-frame-008.jpg',
+  'framesickma/ezgif-frame-009.jpg',
+  'framesickma/hehe.jpg',
+  'framesickma/ezgif-frame-011.jpg',
+  'framesickma/ezgif-frame-012.jpg',
+  'framesickma/ezgif-frame-013.jpg',
+  'framesickma/ezgif-frame-014.jpg', 
+  'framesickma/ezgif-frame-015.jpg',
+  'framesickma/ezgif-frame-016.jpg',   
+  'framesickma/ezgif-frame-017.jpg',
+  'framesickma/ezgif-frame-018.jpg',
+  'framesickma/ezgif-frame-019.jpg',
+  'framesickma/ezgif-frame-020.jpg',
+  'framesickma/ezgif-frame-021.jpg',
+  'framesickma/ezgif-frame-022.jpg',
+  'framesickma/ezgif-frame-023.jpg',
+  'framesickma/ezgif-frame-024.jpg',
+  'framesickma/ezgif-frame-025.jpg',
+  'framesickma/ezgif-frame-026.jpg',
+  'framesickma/ezgif-frame-027.jpg',
+  'framesickma/ezgif-frame-028.jpg',
+  'framesickma/ezgif-frame-029.jpg',
+  'framesickma/ezgif-frame-030.jpg',
+  'framesickma/ezgif-frame-031.jpg',
+  'framesickma/hehe.jpg',
+  'framesickma/ezgif-frame-033.jpg',
+  'framesickma/ezgif-frame-034.jpg',
+  'framesickma/ezgif-frame-035.jpg',
+  'framesickma/ezgif-frame-036.jpg',
+  'framesickma/hehe.jpg',
+  'framesickma/ezgif-frame-038.jpg',
+  'framesickma/ezgif-frame-039.jpg',
+  'framesickma/ezgif-frame-040.jpg',
+  'framesickma/ezgif-frame-041.jpg',
+  'framesickma/ezgif-frame-042.jpg',
+  'framesickma/ezgif-frame-043.jpg',
+  'framesickma/ezgif-frame-044.jpg',
+  'framesickma/ezgif-frame-045.jpg',
+  'framesickma/ezgif-frame-046.jpg',
+  'framesickma/ezgif-frame-047.jpg',
+  'framesickma/ezgif-frame-048.jpg',
+  'framesickma/ezgif-frame-049.jpg',
+  'framesickma/ezgif-frame-050.jpg'
+];
+
+let currentImage = 0;
+const styleImageElem = document.getElementById('styleImage');
+
+setInterval(() => {
+  currentImage = (currentImage + 1) % styleImages.length;
+  styleImageElem.src = styleImages[currentImage];
+}, 1000); // changes every 2 seconds
+
+const textOverlay = document.querySelector('.STYLE-overlay');
+
+const lightImages = ['gambar/ssuit2.png', 'gambar/ssuit4.png']; // list of light background images
+
+setInterval(() => {
+  currentImage = (currentImage + 1) % styleImages.length;
+  const newSrc = styleImages[currentImage];
+  styleImageElem.src = newSrc;
+
+  // Check if the image is light
+  if (lightImages.includes(newSrc)) {
+    textOverlay.classList.add('dark-text');
+  } else {
+    textOverlay.classList.remove('dark-text');
+  }
+}, 2000);
